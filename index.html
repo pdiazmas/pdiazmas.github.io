@@ -1,72 +1,374 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Carlos Santana</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Sección de Bienvenida -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <h1>Hola, soy <span>Carlos Santana</span></h1>
-            <p>Comerciante digital profesional + gestor de redes sociales</p>
-            <a href="#quien-soy" class="btn">Mi portfolio</a>
-        </div>
-    </section>
+<html>
+  <head prefix="og: https://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CV | Arturo Urbanos Vara (ArturoCode)</title>
+    <meta property="og:title" content="CV | Arturo Urbanos Vara (ArturoCode)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CV virtual de Arturo Urbanos Vara (ArturoCode)"
+    />
+    <meta
+      property="og:description"
+      content="CV virtual de Arturo Urbanos Vara (ArturoCode)"
+    />
 
-    <!-- Quién soy -->
-    <section id="quien-soy" class="about">
-        <div class="container">
-            <h2>Quién soy y lo que hago</h2>
-            <p>Me llamo Carlos Santana. Soy experto en marketing digital y gestor de redes sociales con sede en Barcelona. He trabajado con varias marcas en la puesta a punto de su SEO, impulsando la presencia en redes sociales y desarrollando la estrategia global de contenidos.</p>
-        </div>
-    </section>
+    <meta property="og:url" content="https://arturocode.github.io/cv-virtual" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/logo.png" />
+    <meta
+      name="keywords"
+      content="web page, cv, curriculum, curriculum vitae, github, project"
+    />
+    <meta name="author" content="ArturoCode" />
 
-    <!-- Clientes -->
-    <section id="clientes" class="clients">
-        <div class="container">
-            <h2>Clientes con los que he trabajado</h2>
-            <div class="client-logos">
-                <div class="logo">Calzados Modeporte</div>
-                <div class="logo">Restaurante Aguaca</div>
-                <div class="logo">Clínica Agudeza Visual</div>
+    <meta name="twitter:site" content="@ArturoCode" />
+    <!--<meta name="twitter:card" content="summary || summary_large_image || player || app" />-->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:image"
+      content="https://arturocode.github.io/images/arturocode_logo_full.png"
+    />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon" />
+
+    <!--Fuentes-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.5/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--Script para las animaciones-->
+    <script src="js/ext/modernizr-2.6.2.min.js"></script>
+    <!--Script con el contenido variable-->
+    <script type="module" src="js/populateHTML.js"></script>
+
+    <!--Scripts para el formulario-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript"> emailjs.init('TKdgS_muqGQh6VR4d') </script>
+  </head>
+
+  <body>
+    <div id="colorlib-page">
+      <div class="container-wrap">
+        <a
+          href="#"
+          class="js-colorlib-nav-toggle colorlib-nav-toggle"
+          data-toggle="collapse"
+          data-target="#navbar"
+          aria-expanded="false"
+          aria-controls="navbar"
+          ><i></i
+        ></a>
+        <!--------------------BARRA LATERAL-------------------------->
+        <aside
+          id="colorlib-aside"
+          role="complementary"
+          class="border js-fullheight no-print"
+        >
+          <div class="text-center">
+            <div class="author-img">
+              <img src="images/logo_nombre.png" />
             </div>
-        </div>
-    </section>
-
-    <!-- Testimonios -->
-    <section id="testimonios" class="testimonials">
-        <div class="container">
-            <h2>Opinión de mis clientes</h2>
-            <blockquote>
-                <p>“Trabajar con Carlos es una bendición. Llegó y le dio un giro a nuestra empresa con un increíble cambio de marca online. Nos proporcionó una estrategia integral de marketing digital que disparó nuestro ranking en los motores de búsqueda e impulsó nuestra presencia en redes sociales.”</p>
-                <cite>- Diego Morales, Fundador y CEO, Sistemas móviles de Lamplight</cite>
-            </blockquote>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <h2>Contacto</h2>
-            <p>Móvil: 645 678 123</p>
-            <p>Correo: <a href="mailto:hola@unsitiogenial.es">hola@unsitiogenial.es</a></p>
-            <p>Dirección: Calle Prados, 64, Albacete, C. P. 12345</p>
-            <div class="social-media">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
+            <h1 id="colorlib-logo">
+              <a href="./index.html">Arturo Urbanos<br />Vara</a>
+            </h1>
+          </div>
+          <nav
+            id="colorlib-main-menu"
+            role="navigation"
+            class="navbar"
+            style="padding-top: 2em"
+          >
+            <div id="navbar" class="collapse">
+              <ul>
+                <li><a href="#" data-nav-section="about">Sobre mí</a></li>
+                <li><a href="#" data-nav-section="languages">Idiomas</a></li>
+                <li><a href="#" data-nav-section="projects">Proyectos</a></li>
+                <li>
+                  <a href="#" data-nav-section="experience">Experiencia</a>
+                </li>
+                <li><a href="#" data-nav-section="education">Educación</a></li>
+                <li><a href="#" data-nav-section="contact">Contacto</a></li>
+                <li style="margin-top: 30px">
+                  <img
+                    src="images/night-mode.png"
+                    id="dark-mode"
+                    alt="Modo Oscuro"
+                    onclick="enableDarkMode()"
+                    align="center"
+                    style="cursor: pointer"
+                  />
+                  <img
+                    src="images/go-to-top.png"
+                    id="go-to-top"
+                    alt="Ir Arriba"
+                    onclick="goToTop()"
+                    align="center"
+                    style="cursor: pointer"
+                  />
+                </li>
+              </ul>
             </div>
-        </div>
-    </section>
+          </nav>
+        </aside>
+        <!--------------------BARRA LATERAL---------------------------->
 
-    <footer>
-        <p>&copy; 2024 Carlos Santana. Todos los derechos reservados.</p>
-    </footer>
-</body>
+        <!--------------------PÁGINA PRINCIPAL------------------------->
+        <div id="colorlib-main">
+          <!--------------------SECCIÓN: SOBRE MÍ-------------------------->
+          <section class="colorlib-about" data-section="about">
+            <div class="colorlib-narrow-content">
+              <div class="row animate-box" data-animate-effect="fadeInLeft">
+                <div class="about-desc">
+                  <h1 style="margin-top: 40px">Sobre mí</h1>
+                  <p>
+                    ¡Hola! &#128075; <br /><br />
+                    Me llamo Arturo Urbanos Vara y soy Técnico Superior de
+                    Desarrollo de Aplicaciones Web y Sistemas y Redes.
+                    Actualmente trabajo como FullStack Developer y me he formado
+                    también en plataformas tecnológicas como OpenWebinars,
+                    Platzi, Benowu y Crehana.
+                  </p>
+                  <p>
+                    Más allá de la informática, soy autor, redactor y lector
+                    profesional, por lo que puedo realizar proyectos web para
+                    autores, lectores, editoriales y otras empresas del sector.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--------------------SECCIÓN: SOBRE MÍ---------------------------->
+          <!--------------------SECCIÓN: IDIOMAS---------------------------->
+          <section class="colorlib-languages" data-section="languages">
+            <div class="colorlib-narrow-content">
+              <div
+                class="row row-bottom-padded-sm animate-box"
+                data-animate-effect="fadeInLeft"
+              >
+                <div class="about-desc">
+                  <h1>Idiomas</h1>
+                </div>
+              </div>
+              <div id="languages" class="row"></div>
+            </div>
+          </section>
+
+          <!--------------------SECCIÓN: IDIOMAS------------------------------>
+          <!--------------------SECCIÓN: PROYECTOS-------------------------->
+          <section class="colorlib-projects no-print" data-section="projects">
+            <div class="colorlib-narrow-content">
+              <div
+                class="row row-bottom-padded-sm animate-box"
+                data-animate-effect="fadeInLeft"
+              >
+                <div class="about-desc">
+                  <h1>Proyectos <span style="color: #f9bf3f">Web</span></h1>
+                </div>
+              </div>
+              <ul
+                id="accordion"
+                class="accordion animate-box"
+                data-animate-effect="fadeInLeft"
+              >
+                <li>
+                  <div class="link">
+                    <p style="margin-bottom: 0px">Destacados</p>
+                    <i class="fa fa-chevron-down"></i>
+                  </div>
+                  <ul id="web-projects" class="submenu"></ul>
+                </li>
+                <li>
+                  <div class="link">
+                    <p style="margin-bottom: 0px">Literarios</p>
+                    <i class="fa fa-chevron-down"></i>
+                  </div>
+                  <ul id="literature-projects" class="submenu"></ul>
+                </li>
+                <li>
+                  <div class="link">
+                    <p style="margin-bottom: 0px">Freelance</p>
+                    <i class="fa fa-chevron-down"></i>
+                  </div>
+                  <ul id="freelance-projects" class="submenu"></ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!--------------------SECCIÓN: PROYECTOS---------------------------->
+          <!--------------------SECCIÓN: EXPERIENCIA------------------->
+          <section class="colorlib-experience" data-section="experience">
+            <div class="colorlib-narrow-content">
+              <div
+                class="row row-bottom-padded-sm animate-box fadeInLeft animated"
+                data-animate-effect="fadeInLeft"
+              >
+                <div class="about-desc">
+                  <h1>
+                    Experiencia <span style="color: #f9bf3f">laboral</span>
+                  </h1>
+                </div>
+              </div>
+              <div class="timeline-centered" id="experience"></div>
+            </div>
+          </section>
+          <!--------------------SECCIÓN: EXPERIENCIA--------------------->
+          <!--------------------SECCIÓN: EDUCACIÓN Y CURSOS------------------------->
+          <section class="colorlib-education" data-section="education">
+            <div class="colorlib-narrow-content">
+              <div
+                class="row row-bottom-padded-sm animate-box fadeInLeft animated"
+                data-animate-effect="fadeInLeft"
+              >
+                <div class="about-desc">
+                  <h1>
+                    Educación <span style="color: #f9bf3f">y cursos</span>
+                  </h1>
+                </div>
+              </div>
+              <div class="timeline-centered" id="education"></div>
+            </div>
+          </section>
+          <!--------------------SECCIÓN: EDUCACIÓN Y CURSOS--------------------------->
+          <!--------------------SECCIÓN: CONTACTO--------------------------->
+          <section class="colorlib-contact" data-section="contact" id="contacto">
+            <div class="colorlib-narrow-content">
+              <div
+                class="row row-bottom-padded-sm animate-box"
+                data-animate-effect="fadeInLeft"
+              >
+                <div class="about-desc">
+                  <h1>Contacto</h1>
+                </div>
+                <p>Puedes encontrarme en redes sociales. Estoy en:</p>
+                <table border="0">
+                  <tr>
+                    <td>
+                      <a href="https://www.twitter.com/ArturoCode"
+                        ><img src="images/twitter.png"
+                      /></a>
+                    </td>
+                    <td>
+                      <a href="https://www.linkedin.com/in/arturo-urbanos-vara"
+                        ><img src="images/linkedin.png"
+                      /></a>
+                    </td>
+                    <td>
+                      <a href="https://github.com/ArturoCode"
+                        ><img src="images/github.png"
+                      /></a>
+                    </td>
+                  </tr>
+                </table>
+                <br />
+                <p>
+                  Si quieres ponerte en contacto conmigo, ya sea para proponerme
+                  un proyecto, consultarme alguna duda o simplemente para decir
+                  "hola", puedes enviarme un correo electrónico a través de este
+                  formulario:
+                </p>
+                <div align="center">
+                  <!--<script
+                    src="https://apps.elfsight.com/p/platform.js"
+                    defer
+                  ></script>
+                  <div
+                    class="elfsight-app-ad877d91-2c48-402b-a758-fb930ba0f66f"
+                  ></div>-->
+
+                    <form id="form">
+                    <div class="field">
+                      <label for="user_name">Tu nombre*</label>
+                      <input required type="text" name="user_name" id="user_name" placeholder="Ej: Jon Snow"></input>
+                    </div>
+                    <div class="field">
+                      <label for="user_email">Tu email*</label>
+                      <input required type="email" name="user_email" id="user_email" placeholder="Ej: jon@snow.com"></input>
+                    </div>
+                    <div class="field">
+                      <label for="message">Tu mensaje*</label>
+                      <textarea required name="message" id="message" rows="6" placeholder="Escribe tu mensaje aquí"></textarea>
+                    </div>
+                    <input type="submit" id="button" value="Enviar"></input>
+                  </form>
+
+              </div>
+            </div>
+          </section>
+          <!--------------------SECCIÓN: CONTACTO----------------------------->
+
+          <!--------------------FOOTER---------------------------->
+          <section class="colorlib-footer no-print" data-section="footer">
+            <div class="colorlib-narrow-content">
+              <footer class="footer" id="footer">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="row row-bottom-padded-sm">
+                      <div class="col-md-12">
+                        <div class="copyright">
+                          <h4 align="center">
+                            Hecho con ❤️ por
+                            <a href="https://arturocode.vercel.app/"
+                              >ArturoCode</a
+                            >
+                            <small class="block"
+                              >&copy;
+                              <script>
+                                document.write(new Date().getFullYear());
+                              </script>
+                            </small>
+                          </h4>
+                          <p><b>Credits</b></p>
+                          Twitter, LinkedIn, GitHub, Night Mode & Top Arrow
+                          icons by
+                          <a target="_blank" href="https://icons8.com"
+                            >Icons8</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </section>
+
+          <!--------------------FOOTER------------------------------>
+        </div>
+        <!--------------------PÁGINA PRINCIPAL------------------------->
+      </div>
+    </div>
+    <!-- Scripts jQuery -->
+    <script src="js/ext/jquery.min.js"></script>
+    <script src="js/ext/jquery.easing.1.3.js"></script>
+    <script src="js/ext/jquery.waypoints.min.js"></script>
+    <script src="js/ext/jquery.flexslider-min.js"></script>
+    <script src="js/ext/jquery.countTo.js"></script>
+
+    <!-- Script el formulario-->
+
+    <script src="js/form.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="js/ext/bootstrap.min.js"></script>
+    <!-- JS Principal -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
