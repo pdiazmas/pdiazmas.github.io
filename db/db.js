@@ -28,47 +28,16 @@ export default {
   projects: {
     web: [
       {
-        projectName: "ArturoCode | Desarrollador web",
-        image: "images/cv-portfoliocode.png",
-        summary:
-          "Una página web / portfolio dedicada a mi trabajo, experiencia y formación",
-        preview: "https://arturocode.vercel.app/",
-        techStack: ["React", "JavaScript", "CSS..."],
-      },
-      {
-        projectName: "Linktree (Arturo's Version)",
-        image: "images/cv-linkscode.png",
-        summary:
-          "Una One-Page sencilla y adaptada a mis redes y proyectos como desarrollador web.",
-        preview: "https://arturocode.github.io/links/",
-        techStack: ["HTML", "CSS", "Bootstrap..."],
-      },
-      {
-        projectName: "Blog Tech ⚡ Super & Notion",
-        image: "images/cv-blogcode.png",
-        summary:
-          "Blog minimalista. También puede ser una web completa fácil de mantener para un usuario común.",
-        preview: "https://arturocodeblog.super.site/",
-        techStack: ["Notion", "Super", "CSS", "Markdown"],
-      },
-    ],
-    literature: [
-      {
-        projectName: "Portfolio literario",
-        image: "images/cv-portfoliowriter.png",
-        summary: "Portfolio literario para profesionales del sector.",
-        preview: "https://arturourbanos-portfolio.vercel.app/",
-        techStack: ["HTML", "CSS", "JavaScript", "jQuery..."],
-      },
-      {
-        projectName: "Title | Book Social",
+        projectName: "Proyectos Web",
         image: "",
         summary: "Próximamente.",
         preview: "#",
         techStack: [""],
       },
+    ],
+    literature: [
       {
-        projectName: "Landing Book Page",
+        projectName: "Próximamente",
         image: "",
         summary: "Próximamente.",
         preview: "#",
@@ -77,27 +46,11 @@ export default {
     ],
     freelance: [
       {
-        projectName: "Excursiones Íbice",
-        image: "images/cv-ibice.png",
-        summary:
-          "Trabajo Final del Grado Superior de Desarrollo de Aplicaciones Web.",
-        preview: "https://github.com/ArturoCode/excursiones-ibice",
-        techStack: ["Node.js", "JS", "Express", "HTML&CSS", "MySQL..."],
-      },
-      {
-        projectName: "@tu-usuario | Social",
-        image: "images/cv-linkswriter.png",
-        summary:
-          "One-Page personalizada para todo tipo de creadores de contenido.",
-        preview: "https://arturourbanos-links.vercel.app/",
-        techStack: ["HTML", "CSS", "Bootstrap..."],
-      },
-      {
-        projectName: "Tu-Wiki",
+        projectName: "Proyectos Freelance",
         image: "",
         summary: "Próximamente.",
         preview: "#",
-        techStack: ["MongoDB", "Express", "Angular", "node.js..."],
+        techStack: [""],
       },
     ],
   },
