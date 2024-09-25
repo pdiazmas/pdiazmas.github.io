@@ -7,10 +7,22 @@ export default {
       percentage: "100",
     },
     {
+      title: "Catalan",
+      skillName: "Catalan (Nativo)",
+      color: "3",
+      percentage: "100",
+    },
+    {
       title: "English",
-      skillName: "Inglés (C1 - FCE)",
+      skillName: "Inglés (C2)",
       color: "1",
       percentage: "85",
+    },
+    {
+      title: "German",
+      skillName: "Alemán (B2)",
+      color: "4",
+      percentage: "70",
     },
   ],
   projects: {
@@ -18,13 +30,10 @@ export default {
       {
         projectName: "ArturoCode | Desarrollador web",
         image: "images/cv-portfoliocode.png",
-        summary: "Una página web / portfolio dedicada a mi trabajo, experiencia y formación",
+        summary:
+          "Una página web / portfolio dedicada a mi trabajo, experiencia y formación",
         preview: "https://arturocode.vercel.app/",
-        techStack: [
-          "React",
-          "JavaScript",
-          "CSS...",
-        ],
+        techStack: ["React", "JavaScript", "CSS..."],
       },
       {
         projectName: "Linktree (Arturo's Version)",
@@ -32,11 +41,7 @@ export default {
         summary:
           "Una One-Page sencilla y adaptada a mis redes y proyectos como desarrollador web.",
         preview: "https://arturocode.github.io/links/",
-        techStack: [
-          "HTML",
-          "CSS",
-          "Bootstrap..."
-        ],
+        techStack: ["HTML", "CSS", "Bootstrap..."],
       },
       {
         projectName: "Blog Tech ⚡ Super & Notion",
@@ -68,7 +73,7 @@ export default {
         summary: "Próximamente.",
         preview: "#",
         techStack: [""],
-      }
+      },
     ],
     freelance: [
       {
@@ -77,89 +82,64 @@ export default {
         summary:
           "Trabajo Final del Grado Superior de Desarrollo de Aplicaciones Web.",
         preview: "https://github.com/ArturoCode/excursiones-ibice",
-        techStack: [
-          "Node.js",
-          "JS",
-          "Express",
-          "HTML&CSS",
-          "MySQL...",
-        ],
+        techStack: ["Node.js", "JS", "Express", "HTML&CSS", "MySQL..."],
       },
       {
         projectName: "@tu-usuario | Social",
         image: "images/cv-linkswriter.png",
-        summary: "One-Page personalizada para todo tipo de creadores de contenido.",
+        summary:
+          "One-Page personalizada para todo tipo de creadores de contenido.",
         preview: "https://arturourbanos-links.vercel.app/",
-        techStack: [
-          "HTML",
-          "CSS",
-          "Bootstrap..."
-        ],
+        techStack: ["HTML", "CSS", "Bootstrap..."],
       },
       {
         projectName: "Tu-Wiki",
         image: "",
         summary: "Próximamente.",
         preview: "#",
-        techStack: [
-          "MongoDB",
-          "Express",
-          "Angular",
-          "node.js..."
-        ],
+        techStack: ["MongoDB", "Express", "Angular", "node.js..."],
       },
     ],
   },
   experience: [
     {
-      title: "Acevedo S.L.",
+      title: "CAP Tàrrega",
       duration: "Sept. 2022 - actualidad",
-      subtitle: "Full Stack Developer",
+      subtitle: "Técnico en Imagen por el Diagnóstico",
+      details: ["Realización de Radiologia simple de urgencias"],
+      tags: ["Rx", "CAP", "Radiología Simple", "CFGS"],
+    },
+    {
+      title: "Prácticas Clínicas de Enfermería",
+      duration: "Sep. 2020 - Jun. 2024",
+      subtitle: "Graduado en Enfermería",
       details: [
-        "Desarrollo de aplicaciones web (frontend y backend) cloud native con MEAN stack. Herramientas de despliegue como Docker. Control de ramas, versiones y repositorios.",
+        "Realización de tareas de enfermería en: Hospital Universitari d'Igualada, Hospital Sagrat Cor, CAP Piera, CAP Montbui",
       ],
       tags: [
-        "Angular",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Docker",
-        "TypeScript",
-        "GitHub",
-        "Ubuntu",
+        "Enfermería comunitaria",
+        "Enfermería de salud mental",
+        "Enfemería hospitalaria",
+        "Enfermería gerontológica",
       ],
     },
     {
-      title: "AlcaláBC - Colegio de Registradores de España",
-      duration: "Jun. 2019 - Aug. 2019",
-      subtitle: "Técnico de soporte de TI",
+      title: "Hospital Universitari Santa Maria",
+      duration: "Mar. 2021 - Sep. 2021",
+      subtitle: "Técnico en Imagen por el Diagnóstico",
       details: [
-        "Soporte técnico de programas (Deposito digital D2, Legalia, Internet Explorer, Java) y el funcionamiento relacionado con el portal del Colegio de Registradores de España.",
+        "Realización de RMN, Rx simple, Ecografía, Técnicas de Imagen en intervenciones quirúrgicas",
       ],
-      tags: [
-        "Windows",
-        "Java",
-        "Internet Explorer",
-        "Legalia",
-        "Deposito Digital D2",
-      ],
+      tags: ["RMN", "Rx", "CFGS", "ECO", "Escopia"],
     },
     {
-      title: "Serconi S.L.",
-      duration: "Mar. 2019 - Jun. 2019",
-      subtitle: "Técnico informático. Contrato de prácticas",
+      title: "Prácticas Clínicas de CFGS",
+      duration: "Sep. 2019 - Nov. 2019",
+      subtitle: "Técnico en Imagen por el Diagnóstico",
       details: [
-        "Servicios de consultoría informática. Soporte remoto. Resolver problemas informáticos a clientes, optimización de software, políticas de gestión de ficheros...",
+        "Realización de RMN, Rx simple, Ecografía, Técnicas de Imagen en intervenciones quirúrgicas",
       ],
-      tags: [
-        "Windows",
-        "Ubuntu",
-        "Thunderbird",
-        "Backup",
-        "Office",
-        "Soporte Técnico",
-        "Programas",
-      ],
+      tags: ["RMN", "Rx", "CFGS", "ECO", "Escopia"],
     },
   ],
   education: [
