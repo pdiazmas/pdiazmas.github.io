@@ -1,326 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head prefix="og: https://ogp.me/ns#">
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>CV | Pau Díaz Masero</title>
-    <meta property="og:title" content="CV | Pau Díaz Masero" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Villa Pau — CV interactivo | Pau Díaz Masero</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <meta
       name="description"
-      content="CV virtual de Pau Díaz Masero"
+      content="Explora Villa Pau: el currículum jugable en 3D de Pau Díaz Masero. Recorre el pueblo, entra en sus edificios y habla con los lugareños para descubrir su experiencia, estudios e idiomas."
     />
+    <meta property="og:title" content="Villa Pau — CV interactivo | Pau Díaz Masero" />
     <meta
       property="og:description"
-      content="CV virtual de Pau Díaz Masero"
+      content="Un currículum que se juega: recorre un pueblo en 3D y habla con sus lugareños para conocer a Pau Díaz Masero."
     />
-
     <meta property="og:url" content="https://pdiazmas.github.io" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="images/logo.png" />
+    <meta property="og:image" content="images/villa-pau.jpg" />
     <meta
       name="keywords"
-      content="web page, cv, curriculum, curriculum vitae, github, project"
+      content="cv, curriculum, curriculum vitae, interactivo, 3d, three.js, juego, portfolio, Pau Díaz Masero"
     />
     <meta name="author" content="Pau Díaz" />
 
-    <!-- FAVICON -->
     <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon" />
 
-    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.5/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/game.css" />
 
-    <!--Script para las animaciones-->
-    <script src="js/ext/modernizr-2.6.2.min.js"></script>
-    <!--Script con el contenido variable-->
-    <script type="module" src="js/populateHTML.js"></script>
-
-    <!--Scripts para el formulario-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript"> emailjs.init('TKdgS_muqGQh6VR4d') </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+        }
+      }
+    </script>
   </head>
 
   <body>
-    <div id="colorlib-page">
-      <div class="container-wrap">
-        <a
-          href="#"
-          class="js-colorlib-nav-toggle colorlib-nav-toggle"
-          data-toggle="collapse"
-          data-target="#navbar"
-          aria-expanded="false"
-          aria-controls="navbar"
-          ><i></i
-        ></a>
-        <!--------------------BARRA LATERAL-------------------------->
-        <aside
-          id="colorlib-aside"
-          role="complementary"
-          class="border js-fullheight no-print"
-        >
-          <div class="text-center">
-            <div class="author-img">
-              <img src="images/logo_nombre.png" />
-            </div>
-            <h1 id="colorlib-logo">
-              <a href="./index.html">Pau Díaz<br />Masero</a>
-            </h1>
-          </div>
-          <nav
-            id="colorlib-main-menu"
-            role="navigation"
-            class="navbar"
-            style="padding-top: 2em"
-          >
-            <div id="navbar" class="collapse">
-              <ul>
-                <li><a href="#" data-nav-section="about">Sobre mí</a></li>
-                <li><a href="#" data-nav-section="languages">Idiomas</a></li>
-                <li><a href="#" data-nav-section="projects">Proyectos</a></li>
-                <li>
-                  <a href="#" data-nav-section="experience">Experiencia</a>
-                </li>
-                <li><a href="#" data-nav-section="education">Educación</a></li>
-                <li><a href="#" data-nav-section="contact">Contacto</a></li>
-                <li style="margin-top: 30px">
-                  <img
-                    src="images/night-mode.png"
-                    id="dark-mode"
-                    alt="Modo Oscuro"
-                    onclick="enableDarkMode()"
-                    align="center"
-                    style="cursor: pointer"
-                  />
-                  <img
-                    src="images/go-to-top.png"
-                    id="go-to-top"
-                    alt="Ir Arriba"
-                    onclick="goToTop()"
-                    align="center"
-                    style="cursor: pointer"
-                  />
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </aside>
-        <!--------------------BARRA LATERAL---------------------------->
+    <canvas id="game"></canvas>
 
-        <!--------------------PÁGINA PRINCIPAL------------------------->
-        <div id="colorlib-main">
-          <!--------------------SECCIÓN: SOBRE MÍ-------------------------->
-          <section class="colorlib-about" data-section="about">
-            <div class="colorlib-narrow-content">
-              <div class="row animate-box" data-animate-effect="fadeInLeft">
-                <div class="about-desc">
-                  <h1 style="margin-top: 40px">Sobre mí</h1>
-                  <p>
-                    ¡Hola! &#128075; <br /><br />
-                    Me llamo Pau Díaz Masero y soy Técnico Superior de
-                    Imagen para el diagnóstico, Enfermero y futuro ingeniero informático.
-                    Actualmente trabajo como Técnico y como Enfermero
-                  </p>
-                  <p>
-                    Más allá de la informática y la salud, soy autor, redactor y lector
-                    profesional.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!--------------------SECCIÓN: SOBRE MÍ---------------------------->
-          <!--------------------SECCIÓN: IDIOMAS---------------------------->
-          <section class="colorlib-languages" data-section="languages">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>Idiomas</h1>
-                </div>
-              </div>
-              <div id="languages" class="row"></div>
-            </div>
-          </section>
-
-          <!--------------------SECCIÓN: IDIOMAS------------------------------>
-          <!--------------------SECCIÓN: PROYECTOS-------------------------->
-          <section class="colorlib-projects no-print" data-section="projects">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>Proyectos <span style="color: #f9bf3f">Web</span></h1>
-                </div>
-              </div>
-              <ul
-                id="accordion"
-                class="accordion animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <li>
-                  <div class="link">
-                    <p style="margin-bottom: 0px">Destacados</p>
-                    <i class="fa fa-chevron-down"></i>
-                  </div>
-                  <ul id="web-projects" class="submenu"></ul>
-                </li>
-                <li>
-                  <div class="link">
-                    <p style="margin-bottom: 0px">Literarios</p>
-                    <i class="fa fa-chevron-down"></i>
-                  </div>
-                  <ul id="literature-projects" class="submenu"></ul>
-                </li>
-                <li>
-                  <div class="link">
-                    <p style="margin-bottom: 0px">Freelance</p>
-                    <i class="fa fa-chevron-down"></i>
-                  </div>
-                  <ul id="freelance-projects" class="submenu"></ul>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <!--------------------SECCIÓN: PROYECTOS---------------------------->
-          <!--------------------SECCIÓN: EXPERIENCIA------------------->
-          <section class="colorlib-experience" data-section="experience">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box fadeInLeft animated"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>
-                    Experiencia <span style="color: #f9bf3f">laboral</span>
-                  </h1>
-                </div>
-              </div>
-              <div class="timeline-centered" id="experience"></div>
-            </div>
-          </section>
-          <!--------------------SECCIÓN: EXPERIENCIA--------------------->
-          <!--------------------SECCIÓN: EDUCACIÓN Y CURSOS------------------------->
-          <section class="colorlib-education" data-section="education">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box fadeInLeft animated"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>
-                    Educación <span style="color: #f9bf3f">y cursos</span>
-                  </h1>
-                </div>
-              </div>
-              <div class="timeline-centered" id="education"></div>
-            </div>
-          </section>
-          <!--------------------SECCIÓN: EDUCACIÓN Y CURSOS--------------------------->
-          <!--------------------SECCIÓN: CONTACTO--------------------------->
-          <section class="colorlib-contact" data-section="contact" id="contacto">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>Contacto</h1>
-                </div>
-                <p>Puedes encontrarme en redes sociales. Estoy en:</p>
-                <table border="0">
-                  <tr>
-                    <td>
-                      <a href="https://www.linkedin.com/in/pau-díaz-masero-3b328a102/"
-                        ><img src="images/linkedin.png"
-                      /></a>
-                    </td>
-                    <td>
-                      <a href="https://www.instagram.com/pau_diaaz_/"
-                      ><img src="images/instagram.png"
-                    /></a> 
-                    </td>
-                    <td>
-                      <a href="https://github.com/pdiazmas"
-                        ><img src="images/github.png"
-                      /></a>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </section>
-          <!--------------------SECCIÓN: CONTACTO----------------------------->
-
-          <!--------------------FOOTER---------------------------->
-          <section class="colorlib-footer no-print" data-section="footer">
-            <div class="colorlib-narrow-content">
-              <footer class="footer" id="footer">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="row row-bottom-padded-sm">
-                      <div class="col-md-12">
-                        <div class="copyright">
-                          <h4 align="center">
-                            Hecho con ❤️ por
-                            <a href="www.linkedin.com/in/pau-díaz-masero-3b328a102"
-                              >Pau</a
-                            >
-                            <small class="block"
-                              >&copy;
-                              <script>
-                                document.write(new Date().getFullYear());
-                              </script>
-                            </small>
-                          </h4>
-                          <p><b>Credits</b></p>
-                          Twitter, LinkedIn, GitHub, Night Mode & Top Arrow
-                          icons by
-                          <a target="_blank" href="https://icons8.com"
-                            >Icons8</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </footer>
-            </div>
-          </section>
-
-          <!--------------------FOOTER------------------------------>
-        </div>
-        <!--------------------PÁGINA PRINCIPAL------------------------->
+    <!-- HUD superior -->
+    <div id="hud" hidden>
+      <div class="left">
+        <span class="chip title">VILLA PAU</span>
+        <span class="chip" id="progress">🏠 0/7 lugares</span>
+      </div>
+      <div class="right">
+        <button id="btn-night" title="Día / Noche">🌙</button>
+        <button id="btn-help" title="Ayuda">❔</button>
       </div>
     </div>
-    <!-- Scripts jQuery -->
-    <script src="js/ext/jquery.min.js"></script>
-    <script src="js/ext/jquery.easing.1.3.js"></script>
-    <script src="js/ext/jquery.waypoints.min.js"></script>
-    <script src="js/ext/jquery.flexslider-min.js"></script>
-    <script src="js/ext/jquery.countTo.js"></script>
-    <!-- Bootstrap -->
-    <script src="js/ext/bootstrap.min.js"></script>
-    <!-- JS Principal -->
-    <script src="js/main.js"></script>
+
+    <!-- Aviso de interacción -->
+    <div id="prompt" hidden></div>
+
+    <!-- Caja de diálogo -->
+    <div id="dialog" hidden>
+      <div id="dialog-box">
+        <div id="dialog-header">
+          <span id="dialog-name"></span>
+          <span id="dialog-role"></span>
+        </div>
+        <div id="dialog-text"></div>
+        <div id="dialog-options"></div>
+      </div>
+    </div>
+
+    <!-- Controles táctiles -->
+    <div id="touch-controls" hidden>
+      <div id="joy-base"><div id="joy-thumb"></div></div>
+      <button id="btn-action">E</button>
+    </div>
+
+    <!-- Toast de logros -->
+    <div id="toast" hidden></div>
+
+    <!-- Fundido de transición -->
+    <div id="fade"></div>
+
+    <!-- Pantalla de bienvenida -->
+    <div id="intro">
+      <h1>VILLA PAU</h1>
+      <p class="subtitle">El currículum jugable de Pau Díaz Masero</p>
+      <div class="controls-grid">
+        <div class="control-card">
+          <span class="icon">🚶</span>
+          Muévete con <b>WASD</b>, las <b>flechas</b> o el <b>joystick</b> táctil.
+        </div>
+        <div class="control-card">
+          <span class="icon">💬</span>
+          Pulsa <b>E</b> para entrar en los edificios y hablar con los lugareños.
+        </div>
+        <div class="control-card">
+          <span class="icon">🎯</span>
+          Visita los <b>7 lugares</b> del pueblo: cada uno guarda una parte del CV.
+        </div>
+        <div class="control-card">
+          <span class="icon">🌙</span>
+          Cambia entre <b>día y noche</b> con el botón de la esquina.
+        </div>
+      </div>
+      <button id="btn-start">▶ Explorar el pueblo</button>
+      <p class="credits">
+        Hecho con ❤️ y <a href="https://threejs.org" target="_blank" rel="noopener">Three.js</a>
+        por Pau Díaz Masero ·
+        <a href="https://github.com/pdiazmas/pdiazmas.github.io" target="_blank" rel="noopener"
+          >Código en GitHub</a
+        >
+      </p>
+    </div>
+
+    <!-- Fallback si no hay WebGL -->
+    <div id="webgl-error" hidden>
+      <h2>😢 Tu navegador no soporta WebGL</h2>
+      <p>
+        Villa Pau necesita WebGL para dibujar el pueblo en 3D.<br />
+        Mientras tanto, puedes conocer a Pau Díaz Masero por aquí:
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/in/pau-díaz-masero-3b328a102/">💼 LinkedIn</a> ·
+        <a href="https://github.com/pdiazmas">🐙 GitHub</a> ·
+        <a href="https://www.instagram.com/pau_diaaz_/">📷 Instagram</a>
+      </p>
+    </div>
+
+    <noscript>
+      <div class="fallback">
+        <h2>Villa Pau necesita JavaScript</h2>
+        <p>
+          Este currículum es un pueblo en 3D que se recorre como un juego. Sin JavaScript no se
+          puede construir, pero aquí va el resumen: Pau Díaz Masero es Técnico Superior en Imagen
+          para el Diagnóstico, Enfermero y estudiante de Ingeniería Informática (UOC). Habla
+          español, catalán, inglés (C2) y alemán (B2).
+        </p>
+        <p>
+          <a href="https://www.linkedin.com/in/pau-díaz-masero-3b328a102/">💼 LinkedIn</a> ·
+          <a href="https://github.com/pdiazmas">🐙 GitHub</a> ·
+          <a href="https://www.instagram.com/pau_diaaz_/">📷 Instagram</a>
+        </p>
+      </div>
+    </noscript>
+
+    <script type="module" src="js/game/main.js"></script>
   </body>
 </html>
